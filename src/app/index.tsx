@@ -34,3 +34,9 @@ const styles = StyleSheet.create({
     color: 'gray',
     marginBottom: 10,
   },
+  photo: {
+    width: '100%',
+    height: 400,
+    borderRadius: 10,
+    marginVertical: 20,
+  },
