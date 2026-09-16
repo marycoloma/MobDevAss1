@@ -26,3 +26,11 @@ const styles = StyleSheet.create({
   container: {
     padding: 20,
   },
+  name: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  date: {
+    color: 'gray',
+    marginBottom: 10,
+  },
