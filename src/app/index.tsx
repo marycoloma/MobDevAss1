@@ -12,6 +12,11 @@ export default function Index() {
         <Text style={styles.engagement}>💬 127</Text>
         <Text style={styles.engagement}>🔁 1</Text>
       </View>
+        
+        <Button
+        title="Press Me"
+        onPress={() => Alert.alert("This is Mary's first assignment!")}
+      />
       />
     </View>
   );
