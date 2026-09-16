@@ -1,54 +1,104 @@
-import { View, Text, Image, Button, Alert, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  Alert,
+  StyleSheet,
+  TouchableOpacity,
+} from "react-native";
 
 export default function Index() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.name}>Mary Ann Coloma</Text>
-      <Text style={styles.date}>Jan 24, 2017</Text>
+    <View style={styles.card}>
+      {/* profile header */}
+      <View style={styles.header}>
+        <Image
+          source={require("../../assets/myphoto.jpg")}
+          style={styles.avatar}
+        />
+        <View>
+          <Text style={styles.name}>Mary Ann Coloma</Text>
+          <Text style={styles.date}>Jan 24, 2017 ·</Text>
+        </View>
+      </View>
 
+      {/* main photo */}
       <Image
         source={require("../../assets/myphoto.jpg")}
-        style={styles.photo}
+        style={styles.mainPhoto}
       />
 
-      <View style={styles.row}>
+      {/* reactions */}
+      <View style={styles.engagementRow}>
         <Text style={styles.engagement}>❤️ 347</Text>
         <Text style={styles.engagement}>💬 127</Text>
         <Text style={styles.engagement}>🔁 1</Text>
       </View>
 
-      <Button
-        title="Press Me"
+      {/* button */}
+      <TouchableOpacity
+        style={styles.button}
         onPress={() => Alert.alert("This is Mary's first assignment!")}
-      />
+      >
+        <Text style={styles.buttonText}>Press Me</Text>
+      </TouchableOpacity>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    padding: 20,
+  card: {
+    backgroundColor: "#fff",
+    padding: 12,
+  },
+
+  header: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 12,
+  },
+  avatar: {
+    width: 45,
+    height: 45,
+    borderRadius: 45,
+    marginRight: 10,
   },
   name: {
-    fontSize: 20,
-    fontWeight: "bold",
+    fontSize: 16,
+    fontWeight: "600",
   },
   date: {
+    fontSize: 12,
     color: "gray",
-    marginBottom: 10,
   },
-  photo: {
+
+  mainPhoto: {
     width: "100%",
     height: 400,
     borderRadius: 10,
-    marginVertical: 20,
+    marginVertical: 10,
   },
-  row: {
+
+  engagementRow: {
     flexDirection: "row",
-    justifyContent: "space-around",
-    marginBottom: 20,
+    justifyContent: "space-between",
+    paddingHorizontal: 10,
+    marginVertical: 10,
   },
   engagement: {
-    fontSize: 18,
+    fontSize: 16,
+  },
+
+  button: {
+    backgroundColor: "#1877F2",
+    paddingVertical: 12,
+    borderRadius: 8,
+    alignItems: "center",
+    marginTop: 10,
+  },
+  buttonText: {
+    color: "#fff",
+    fontWeight: "600",
+    fontSize: 16,
   },
 });
