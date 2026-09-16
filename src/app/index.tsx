@@ -7,6 +7,11 @@ export default function Index() {
       <Image
         source={require("../../assets/myphoto.jpg")}
         style={styles.photo}
+        <View style={styles.row}>
+        <Text style={styles.engagement}>❤️ 347</Text>
+        <Text style={styles.engagement}>💬 127</Text>
+        <Text style={styles.engagement}>🔁 1</Text>
+      </View>
       />
     </View>
   );
