@@ -40,3 +40,8 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginVertical: 20,
   },
+  row: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginBottom: 20,
+  },
