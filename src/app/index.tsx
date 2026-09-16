@@ -45,3 +45,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     marginBottom: 20,
   },
+    engagement: {
+    fontSize: 18,
+  },
+});
